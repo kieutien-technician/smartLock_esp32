@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: #d3e7f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #00796b;
+}
+
+header p {
+    font-size: 16px;
+    color: #444;
+}
+
+.status-control {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.lock-icon {
+    font-size: 100px;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+.lock-icon.open {
+    transform: rotate(20deg);
+}
+
+#status-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-container button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#unlock-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+#unlock-btn:hover {
+    background-color: #43a047;
+}
+
+#lock-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+#lock-btn:hover {
+    background-color: #d32f2f;
+}
+
+.alert-button {
+    background-color: orange;
+    color: white;
+}
+
+.history {
+    margin-top: 40px;
+}
+
+.history h2 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+#history-list {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    list-style: none;
+}
+
+#history-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#history-list li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Accordion mở/đóng */
+#history-toggle {
+    cursor: pointer;
+    text-align: center;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+#history-toggle:hover {
+    color: #004d40;
+}
+
+#history-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.3s ease;
+    padding: 0 10px;
+}
+
+#history-container.expanded {
+    max-height: 500px; /* đủ để chứa nội dung */
+    padding: 10px;
+}
+
+#clear-history-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-history-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Header và logo */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    background-color: #d3e7f8; /* Đảm bảo có nền trắng phía sau logo */
+    border-radius: 8px;
+}
+
+
+
+.logo-vhu:hover {
+    transform: scale(1.1); /* Phóng to logo nhẹ khi hover */
+    transition: transform 0.3s ease;
+}
+
+.header-text h1 {
+    font-size: 26px;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #444;
+}
+
+@media (max-width: 600px) {
+    .logo-vhu {
+        max-width: 60px;
+    }
+
+    .header-text h1 {
+        font-size: 22px;
+    }
+}

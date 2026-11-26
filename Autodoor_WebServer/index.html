@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khóa Cửa Thông Minh - RFID & Mật Khẩu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header-content">
+        <img src="logo.png" alt="Logo" class="logo" style="height: 100px;">
+    </div>
+
+    <header>
+        <h1>Hệ Thống Khóa Cửa Thông Minh</h1>
+        <p>Xác thực bằng thẻ RFID & mật khẩu | Điều khiển từ xa</p>
+    </header>
+
+    <!-- Lock Status and Control -->
+    <section class="status-control">
+        <h2>Trạng thái khóa</h2>
+        <div id="lock-status" class="lock-icon"></div>
+        <p id="status-text">Đang khóa</p>
+
+        <div class="btn-container">
+            <button id="unlock-btn">Mở Khóa</button>
+            <button id="lock-btn">Khóa Lại</button>
+            <button id="alert-toggle-btn" class="alert-button">Bật Cảnh Báo</button>
+            <h3 id="alert-status">Cảnh báo đã tắt</h3>
+        </div>
+    </section>
+
+    <!-- Access History -->
+    <section class="history">
+        <button id="clear-history-btn">Xóa Lịch Sử</button>
+        <h2 id="history-toggle">Lịch sử đóng / mở cửa</h2>
+
+        <div id="history-container" class="collapsed">
+            <ul id="history-list">
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Khóa Cửa Thông Minh | Firebase Integration</p>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
